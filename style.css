@@ -1,0 +1,62 @@
+/* ==========================================
+   ESTILOS BASE (Móvil - Ancho completo)
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Contenedor principal para organizar las tarjetas */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* En móvil, cada div ocupa el ancho completo */
+div {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+
+/* ==========================================
+   CONSULTA N.° 1: Vista de Tableta (772px)
+   ========================================== */
+@media screen and (min-width: 772px) {
+  div {
+    width: 45%; /* Permite ubicar 2 divs por fila */
+  }
+
+  img {
+    max-height: 30vh; /* No supera el 30% de la altura de la ventana */
+    object-fit: cover;
+  }
+}
+
+
+/* ==========================================
+   CONSULTA N.° 2: Vista Pantalla Grande (998px)
+   ========================================== */
+@media screen and (min-width: 998px) {
+  div {
+    width: 30%; /* Permite ubicar 3 divs por fila */
+  }
+}
